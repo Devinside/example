@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install -y vim
 RUN apt-get install -y telnet
 COPY ./conf.d /etc/nginx/conf.d
-COPY . /usr/share/nginx/html
+COPY . /var/www/html
 
 #CMD service php7.4-fpm start && nginx -g "daemon off;"
 #EXPOSE 80
