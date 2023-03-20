@@ -6,11 +6,11 @@ RUN apt-get install -y telnet
 COPY ./conf.d /etc/nginx/conf.d
 COPY . /usr/share/nginx/html
 
-CMD service php7.4-fpm start && nginx -g "daemon off;"
+#CMD service php7.4-fpm start && nginx -g "daemon off;"
 #EXPOSE 80
 
-EXPOSE 9000
+#EXPOSE 9000
 #ENTRYPOINT ["docker-php-entrypoint", "php-fpm"]
 
-#EXPOSE 80
-#ENTRYPOINT ["nginx","-g","daemon off;"]
+EXPOSE 80
+ENTRYPOINT ["nginx","-g","daemon off;"]
