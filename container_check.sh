@@ -5,10 +5,12 @@ if [ -n "$NGINX_CONTAINER_ID" ];
 		echo "nginx container exist!" 
 		docker stop $NGINX_CONTAINER_ID 
 		docker rm $NGINX_CONTAINER_ID 
-		#docker run -d -p 80:80 --name nginx nginx:test 
-		docker-compose up -d
+		docker run -d -p 80:80 --name nginx nginx:test 
+		docker run -d -p 9000:9000 --name php php:test 
+		#docker-compose up -d
 	else 
 		echo "nginx container not exist!"
-		#docker run -d -p 80:80 --name nginx nginx:test
-		docker-compose up -d
+		docker run -d -p 80:80 --name nginx nginx:test
+		docker run -d -p 9000:9000 --name php php:test 
+		#docker-compose up -d
 fi
