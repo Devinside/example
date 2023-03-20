@@ -1,6 +1,6 @@
 FROM nginx:latest
 RUN apt-get update
-RUN apt-get install -y php-fpm
+#RUN apt-get install -y php-fpm
 RUN apt-get install -y vim
 RUN apt-get install -y telnet
 COPY ./conf.d /etc/nginx/conf.d
