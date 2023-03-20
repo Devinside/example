@@ -11,5 +11,5 @@ COPY . /usr/share/nginx/html
 #EXPOSE 9000
 #ENTRYPOINT ["docker-php-entrypoint", "php-fpm"]
 
-EXPOSE 80
-ENTRYPOINT ["nginx","-g","daemon off;"]
+#EXPOSE 80
+#ENTRYPOINT ["nginx","-g","daemon off;"]
